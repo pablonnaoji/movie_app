@@ -39,7 +39,7 @@ MEDIA_URL = '/media/'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
-
+DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = []
 
 
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'movie_app.apps.core',
 ]
 
 MIDDLEWARE = [
